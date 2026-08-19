@@ -8,10 +8,6 @@
 
   <style>
 
-    /* =========================
-       BASE
-    ========================== */
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -29,13 +25,8 @@
       line-height: 1.6;
     }
 
-
-    /* =========================
-       EN-TÊTE
-    ========================== */
-
     header {
-      min-height: 90px;
+      min-height: 110px;
       padding: 12px 7%;
       display: flex;
       justify-content: space-between;
@@ -47,18 +38,18 @@
       z-index: 100;
     }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-.logo img {
-  height: 70px;
-  width: auto;
-  max-width: 320px;
-  display: block;
-  object-fit: contain;
-}
+    .logo img {
+      height: 105px;
+      width: auto;
+      max-width: 460px;
+      display: block;
+      object-fit: contain;
+    }
 
     nav a {
       margin-left: 28px;
@@ -71,11 +62,6 @@
     nav a:hover {
       color: #00b4c8;
     }
-
-
-    /* =========================
-       BANNIÈRE PRINCIPALE
-    ========================== */
 
     .hero {
       min-height: 560px;
@@ -141,11 +127,6 @@
       transform: translateY(-2px);
     }
 
-
-    /* =========================
-       VALEURS
-    ========================== */
-
     .values {
       padding: 55px 8%;
       background: #ffffff;
@@ -184,11 +165,6 @@
     .value p {
       color: #617386;
     }
-
-
-    /* =========================
-       SERVICES
-    ========================== */
 
     .services {
       padding: 75px 8%;
@@ -251,11 +227,6 @@
       color: #00a9bb;
     }
 
-
-    /* =========================
-       SECTION ÉCHO
-    ========================== */
-
     .echo-section {
       padding: 75px 8%;
       background: linear-gradient(
@@ -296,11 +267,6 @@
       transform: translateY(-2px);
     }
 
-
-    /* =========================
-       CONTACT
-    ========================== */
-
     .contact {
       padding: 70px 8%;
       text-align: center;
@@ -331,11 +297,6 @@
       margin-bottom: 7px;
     }
 
-
-    /* =========================
-       PIED DE PAGE
-    ========================== */
-
     footer {
       padding: 32px 8%;
       background: #022f4e;
@@ -349,11 +310,6 @@
       font-size: 12px;
       opacity: 0.8;
     }
-
-
-    /* =========================
-       BOUTON ÉCHO FLOTTANT
-    ========================== */
 
     .echo {
       position: fixed;
@@ -377,21 +333,16 @@
       transform: translateY(-2px);
     }
 
-
-    /* =========================
-       VERSION MOBILE
-    ========================== */
-
     @media (max-width: 850px) {
 
       header {
         padding: 12px 5%;
-        min-height: 80px;
+        min-height: 90px;
       }
 
       .logo img {
-        height: 55px;
-        max-width: 220px;
+        height: 70px;
+        max-width: 260px;
       }
 
       nav {
@@ -425,11 +376,6 @@
 
 <body>
 
-
-  <!-- =========================
-       EN-TÊTE
-  ========================== -->
-
   <header>
 
     <a href="#" class="logo">
@@ -446,11 +392,6 @@
     </nav>
 
   </header>
-
-
-  <!-- =========================
-       BANNIÈRE
-  ========================== -->
 
   <section class="hero">
 
@@ -479,192 +420,88 @@
 
   </section>
 
-
-  <!-- =========================
-       VALEURS
-  ========================== -->
-
   <section class="values">
 
     <div class="value-grid">
 
       <div class="value">
         <div class="value-icon">👥</div>
-
         <h3>Proximité</h3>
-
-        <p>
-          Être proche de nos clients, partout au Québec.
-        </p>
+        <p>Être proche de nos clients, partout au Québec.</p>
       </div>
-
 
       <div class="value">
         <div class="value-icon">📶</div>
-
         <h3>Fiabilité</h3>
-
-        <p>
-          Des services fiables qui vous gardent connectés.
-        </p>
+        <p>Des services fiables qui vous gardent connectés.</p>
       </div>
-
 
       <div class="value">
         <div class="value-icon">♡</div>
-
         <h3>Simplicité</h3>
-
-        <p>
-          Des solutions simples, claires et adaptées à vos besoins.
-        </p>
+        <p>Des solutions simples, claires et adaptées à vos besoins.</p>
       </div>
 
     </div>
 
   </section>
-
-
-  <!-- =========================
-       SERVICES
-  ========================== -->
 
   <section class="services" id="services">
 
-    <h2 class="section-title">
-      Nos services
-    </h2>
-
-    <p class="subtitle">
-      Trouvez la solution adaptée à votre réalité.
-    </p>
-
+    <h2 class="section-title">Nos services</h2>
+    <p class="subtitle">Trouvez la solution adaptée à votre réalité.</p>
 
     <div class="cards">
 
-
       <div class="card">
-
         <div class="card-icon">📶</div>
-
         <h3>Internet</h3>
-
-        <p>
-          Fibre résidentielle offrant des vitesses
-          de 100 Mb/s à 1 Gb/s.
-        </p>
-
-        <div class="price">
-          Dès 54,95 $/mois
-        </div>
-
+        <p>Fibre résidentielle offrant des vitesses de 100 Mb/s à 1 Gb/s.</p>
+        <div class="price">Dès 54,95 $/mois</div>
       </div>
 
-
       <div class="card">
-
         <div class="card-icon">📱</div>
-
         <h3>Mobile</h3>
-
-        <p>
-          Forfaits 5G avec données de 10 Go
-          jusqu'aux données illimitées.
-        </p>
-
-        <div class="price">
-          Dès 35,00 $/mois
-        </div>
-
+        <p>Forfaits 5G avec données de 10 Go jusqu'aux données illimitées.</p>
+        <div class="price">Dès 35,00 $/mois</div>
       </div>
 
-
       <div class="card">
-
         <div class="card-icon">📺</div>
-
         <h3>Télévision</h3>
-
-        <p>
-          De 30 à 70 chaînes avec options sports,
-          cinéma et divertissement.
-        </p>
-
-        <div class="price">
-          Dès 20,00 $/mois
-        </div>
-
+        <p>De 30 à 70 chaînes avec options sports, cinéma et divertissement.</p>
+        <div class="price">Dès 20,00 $/mois</div>
       </div>
 
-
       <div class="card">
-
         <div class="card-icon">🏢</div>
-
         <h3>Solutions affaires</h3>
-
-        <p>
-          Internet symétrique et téléphonie IP
-          conçus pour les PME.
-        </p>
-
-        <div class="price">
-          Dès 24,95 $/mois
-        </div>
-
+        <p>Internet symétrique et téléphonie IP conçus pour les PME.</p>
+        <div class="price">Dès 24,95 $/mois</div>
       </div>
 
-
       <div class="card">
-
         <div class="card-icon">⚙️</div>
-
         <h3>Services complémentaires</h3>
-
-        <p>
-          Répéteur Wi-Fi, antivirus et assistance
-          technique 24/7.
-        </p>
-
-        <div class="price">
-          Dès 5,00 $/mois
-        </div>
-
+        <p>Répéteur Wi-Fi, antivirus et assistance technique 24/7.</p>
+        <div class="price">Dès 5,00 $/mois</div>
       </div>
-
 
       <div class="card">
-
         <div class="card-icon">⭐</div>
-
         <h3>Promotions</h3>
-
-        <p>
-          Profitez de nos offres Duo, Trio
-          et nouveaux clients.
-        </p>
-
-        <div class="price">
-          Jusqu'à 20 $/mois de rabais
-        </div>
-
+        <p>Profitez de nos offres Duo, Trio et nouveaux clients.</p>
+        <div class="price">Jusqu'à 20 $/mois de rabais</div>
       </div>
-
 
     </div>
 
   </section>
 
-
-  <!-- =========================
-       ÉCHO
-  ========================== -->
-
   <section class="echo-section" id="echo">
 
-    <h2>
-      Besoin d'aide? Demandez à Écho.
-    </h2>
+    <h2>Besoin d'aide? Demandez à Écho.</h2>
 
     <p>
       Notre assistant virtuel peut vous aider à découvrir
@@ -672,75 +509,42 @@
       solution qui correspond le mieux à vos besoins.
     </p>
 
-    <button
-      class="echo-demo-button"
-      onclick="ouvrirEcho()">
-
+    <button class="echo-demo-button" onclick="ouvrirEcho()">
       💬 Discuter avec Écho
-
     </button>
 
   </section>
 
-
-  <!-- =========================
-       CONTACT
-  ========================== -->
-
   <section class="contact" id="contact">
 
-    <h2 class="section-title">
-      Nous joindre
-    </h2>
-
-    <p class="subtitle">
-      Une question? Notre équipe est là pour vous aider.
-    </p>
-
+    <h2 class="section-title">Nous joindre</h2>
+    <p class="subtitle">Une question? Notre équipe est là pour vous aider.</p>
 
     <div class="contact-box">
 
       <div class="contact-grid">
 
-
         <div class="contact-item">
-
           <strong>📍 Adresse</strong>
-
           2450, boulevard des Horizons<br>
           Laval (Québec) H7T 2K8
-
         </div>
 
-
         <div class="contact-item">
-
           <strong>☎ Téléphone</strong>
-
           450 555-0188
-
         </div>
-
 
         <div class="contact-item">
-
           <strong>✉ Courriel</strong>
-
           info@telecomboreal.ca
-
         </div>
-
 
       </div>
 
     </div>
 
   </section>
-
-
-  <!-- =========================
-       PIED DE PAGE
-  ========================== -->
 
   <footer>
 
@@ -754,23 +558,9 @@
 
   </footer>
 
-
-  <!-- =========================
-       BOUTON ÉCHO FLOTTANT
-  ========================== -->
-
-  <button
-    class="echo"
-    onclick="ouvrirEcho()">
-
+  <button class="echo" onclick="ouvrirEcho()">
     💬 Discuter avec Écho
-
   </button>
-
-
-  <!-- =========================
-       SCRIPT TEMPORAIRE ÉCHO
-  ========================== -->
 
   <script>
 
@@ -784,7 +574,6 @@
     }
 
   </script>
-
 
 </body>
 </html>

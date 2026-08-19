@@ -7,6 +7,11 @@
   <title>Télécom Boréal | Votre connexion, notre priorité</title>
 
   <style>
+
+    /* =========================
+       BASE
+    ========================== */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -24,10 +29,13 @@
       line-height: 1.6;
     }
 
-    /* ---------------- HEADER ---------------- */
+
+    /* =========================
+       EN-TÊTE
+    ========================== */
 
     header {
-      height: 90px;
+      min-height: 90px;
       padding: 12px 7%;
       display: flex;
       justify-content: space-between;
@@ -39,41 +47,57 @@
       z-index: 100;
     }
 
-  .logo {
-  height: 68px;
-  width: 250px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-.logo img {
-  width: 250px;
-  height: 92px;
-  object-fit: cover;
-  object-position: center;
-}
+    .logo img {
+      height: 65px;
+      width: auto;
+      max-width: 280px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
     nav a {
       margin-left: 28px;
       text-decoration: none;
       color: #024873;
       font-weight: 600;
+      transition: color 0.2s;
     }
 
     nav a:hover {
       color: #00b4c8;
     }
 
-    /* ---------------- HERO ---------------- */
+
+    /* =========================
+       BANNIÈRE PRINCIPALE
+    ========================== */
 
     .hero {
       min-height: 560px;
       padding: 80px 8%;
       display: flex;
       align-items: center;
+
       background:
-        radial-gradient(circle at 85% 30%, rgba(0,180,200,.18), transparent 28%),
-        linear-gradient(135deg, #f5f7fa, #eefbfe);
+        radial-gradient(
+          circle at 85% 30%,
+          rgba(0, 180, 200, 0.18),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #f5f7fa,
+          #eefbfe
+        );
     }
 
     .hero-content {
@@ -113,7 +137,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .button:hover {
@@ -121,7 +145,10 @@
       transform: translateY(-2px);
     }
 
-    /* ---------------- VALEURS ---------------- */
+
+    /* =========================
+       VALEURS
+    ========================== */
 
     .values {
       padding: 55px 8%;
@@ -162,7 +189,10 @@
       color: #617386;
     }
 
-    /* ---------------- SERVICES ---------------- */
+
+    /* =========================
+       SERVICES
+    ========================== */
 
     .services {
       padding: 75px 8%;
@@ -190,18 +220,18 @@
     }
 
     .card {
-      background: white;
+      background: #ffffff;
       border: 1px solid #e1e8ee;
       border-radius: 14px;
       padding: 30px;
       text-align: left;
-      box-shadow: 0 6px 22px rgba(0,0,0,.05);
-      transition: .2s;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+      transition: 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 28px rgba(0,0,0,.09);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
     }
 
     .card-icon {
@@ -225,12 +255,19 @@
       color: #00a9bb;
     }
 
-    /* ---------------- ECHO ---------------- */
+
+    /* =========================
+       SECTION ÉCHO
+    ========================== */
 
     .echo-section {
       padding: 75px 8%;
-      background: linear-gradient(135deg, #024873, #005587);
-      color: white;
+      background: linear-gradient(
+        135deg,
+        #024873,
+        #005587
+      );
+      color: #ffffff;
       text-align: center;
     }
 
@@ -247,17 +284,26 @@
     }
 
     .echo-demo-button {
-      border: 0;
+      border: none;
       padding: 16px 28px;
       border-radius: 30px;
       background: #00b4c8;
-      color: white;
+      color: #ffffff;
       font-size: 17px;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.2s;
     }
 
-    /* ---------------- CONTACT ---------------- */
+    .echo-demo-button:hover {
+      background: #00a1b4;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
 
     .contact {
       padding: 70px 8%;
@@ -266,7 +312,7 @@
     }
 
     .contact-box {
-      max-width: 850px;
+      max-width: 900px;
       margin: 35px auto 0;
       padding: 35px;
       border-radius: 14px;
@@ -279,17 +325,20 @@
       gap: 25px;
     }
 
-    .contact-item strong {
-      display: block;
-      color: #005587;
-      margin-bottom: 5px;
-    }
-
     .contact-item {
       color: #617386;
     }
 
-    /* ---------------- FOOTER ---------------- */
+    .contact-item strong {
+      display: block;
+      color: #005587;
+      margin-bottom: 7px;
+    }
+
+
+    /* =========================
+       PIED DE PAGE
+    ========================== */
 
     footer {
       padding: 32px 8%;
@@ -302,26 +351,29 @@
     footer .demo {
       margin-top: 8px;
       font-size: 12px;
-      opacity: .8;
+      opacity: 0.8;
     }
 
-    /* ---------------- BOUTON ECHO FLOTTANT ---------------- */
+
+    /* =========================
+       BOUTON ÉCHO FLOTTANT
+    ========================== */
 
     .echo {
       position: fixed;
       right: 25px;
       bottom: 25px;
       background: #005587;
-      color: white;
+      color: #ffffff;
       border: none;
       border-radius: 30px;
       padding: 16px 23px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 7px 25px rgba(0,0,0,.25);
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.25);
       z-index: 999;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     .echo:hover {
@@ -329,12 +381,16 @@
       transform: translateY(-2px);
     }
 
-    /* ---------------- MOBILE ---------------- */
+
+    /* =========================
+       VERSION MOBILE
+    ========================== */
 
     @media (max-width: 850px) {
 
       header {
         padding: 12px 5%;
+        min-height: 80px;
       }
 
       .logo img {
@@ -370,252 +426,368 @@
   </style>
 </head>
 
+
 <body>
 
-<header>
 
-  <a href="#" class="logo">
-    <img
-      src="logo rectangle (1).png"
-      alt="Télécom Boréal - Votre connexion, notre priorité">
-  </a>
+  <!-- =========================
+       EN-TÊTE
+  ========================== -->
 
-  <nav>
-    <a href="#">Accueil</a>
-    <a href="#services">Services</a>
-    <a href="#echo">Écho</a>
-    <a href="#contact">Nous joindre</a>
-  </nav>
+  <header>
 
-</header>
-
-
-<section class="hero">
-
-  <div class="hero-content">
-
-    <div class="tag">
-      Télécommunications pour particuliers et entreprises
-    </div>
-
-    <h1>
-      Des services qui<br>
-      vous rapprochent.
-    </h1>
-
-    <p>
-      Internet, mobilité, télévision et solutions d'affaires.
-      Des services fiables, simples et adaptés à vos besoins,
-      partout au Québec.
-    </p>
-
-    <a class="button" href="#services">
-      Découvrir nos services
+    <a href="#" class="logo">
+      <img
+        src="logo-telecom-boreal.png"
+        alt="Télécom Boréal - Votre connexion, notre priorité">
     </a>
 
-  </div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#echo">Écho</a>
+      <a href="#contact">Nous joindre</a>
+    </nav>
 
-</section>
+  </header>
 
 
-<section class="values">
+  <!-- =========================
+       BANNIÈRE
+  ========================== -->
 
-  <div class="value-grid">
+  <section class="hero">
 
-    <div class="value">
-      <div class="value-icon">👥</div>
-      <h3>Proximité</h3>
+    <div class="hero-content">
+
+      <div class="tag">
+        Télécommunications pour particuliers et entreprises
+      </div>
+
+      <h1>
+        Des services qui<br>
+        vous rapprochent.
+      </h1>
+
       <p>
-        Être proche de nos clients, partout au Québec.
+        Internet, mobilité, télévision et solutions d'affaires.
+        Des services fiables, simples et adaptés à vos besoins,
+        partout au Québec.
       </p>
+
+      <a class="button" href="#services">
+        Découvrir nos services
+      </a>
+
     </div>
 
-    <div class="value">
-      <div class="value-icon">📶</div>
-      <h3>Fiabilité</h3>
-      <p>
-        Des services fiables qui vous gardent connectés.
-      </p>
+  </section>
+
+
+  <!-- =========================
+       VALEURS
+  ========================== -->
+
+  <section class="values">
+
+    <div class="value-grid">
+
+      <div class="value">
+        <div class="value-icon">👥</div>
+
+        <h3>Proximité</h3>
+
+        <p>
+          Être proche de nos clients, partout au Québec.
+        </p>
+      </div>
+
+
+      <div class="value">
+        <div class="value-icon">📶</div>
+
+        <h3>Fiabilité</h3>
+
+        <p>
+          Des services fiables qui vous gardent connectés.
+        </p>
+      </div>
+
+
+      <div class="value">
+        <div class="value-icon">♡</div>
+
+        <h3>Simplicité</h3>
+
+        <p>
+          Des solutions simples, claires et adaptées à vos besoins.
+        </p>
+      </div>
+
     </div>
 
-    <div class="value">
-      <div class="value-icon">♡</div>
-      <h3>Simplicité</h3>
-      <p>
-        Des solutions simples, claires et adaptées à vos besoins.
-      </p>
+  </section>
+
+
+  <!-- =========================
+       SERVICES
+  ========================== -->
+
+  <section class="services" id="services">
+
+    <h2 class="section-title">
+      Nos services
+    </h2>
+
+    <p class="subtitle">
+      Trouvez la solution adaptée à votre réalité.
+    </p>
+
+
+    <div class="cards">
+
+
+      <div class="card">
+
+        <div class="card-icon">📶</div>
+
+        <h3>Internet</h3>
+
+        <p>
+          Fibre résidentielle offrant des vitesses
+          de 100 Mb/s à 1 Gb/s.
+        </p>
+
+        <div class="price">
+          Dès 54,95 $/mois
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">📱</div>
+
+        <h3>Mobile</h3>
+
+        <p>
+          Forfaits 5G avec données de 10 Go
+          jusqu'aux données illimitées.
+        </p>
+
+        <div class="price">
+          Dès 35,00 $/mois
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">📺</div>
+
+        <h3>Télévision</h3>
+
+        <p>
+          De 30 à 70 chaînes avec options sports,
+          cinéma et divertissement.
+        </p>
+
+        <div class="price">
+          Dès 20,00 $/mois
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🏢</div>
+
+        <h3>Solutions affaires</h3>
+
+        <p>
+          Internet symétrique et téléphonie IP
+          conçus pour les PME.
+        </p>
+
+        <div class="price">
+          Dès 24,95 $/mois
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">⚙️</div>
+
+        <h3>Services complémentaires</h3>
+
+        <p>
+          Répéteur Wi-Fi, antivirus et assistance
+          technique 24/7.
+        </p>
+
+        <div class="price">
+          Dès 5,00 $/mois
+        </div>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">⭐</div>
+
+        <h3>Promotions</h3>
+
+        <p>
+          Profitez de nos offres Duo, Trio
+          et nouveaux clients.
+        </p>
+
+        <div class="price">
+          Jusqu'à 20 $/mois de rabais
+        </div>
+
+      </div>
+
+
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<section class="services" id="services">
+  <!-- =========================
+       ÉCHO
+  ========================== -->
 
-  <h2 class="section-title">
-    Nos services
-  </h2>
+  <section class="echo-section" id="echo">
 
-  <p class="subtitle">
-    Trouvez la solution adaptée à votre réalité.
-  </p>
+    <h2>
+      Besoin d'aide? Demandez à Écho.
+    </h2>
+
+    <p>
+      Notre assistant virtuel peut vous aider à découvrir
+      nos services, comparer les forfaits et trouver la
+      solution qui correspond le mieux à vos besoins.
+    </p>
+
+    <button
+      class="echo-demo-button"
+      onclick="ouvrirEcho()">
+
+      💬 Discuter avec Écho
+
+    </button>
+
+  </section>
 
 
-  <div class="cards">
+  <!-- =========================
+       CONTACT
+  ========================== -->
 
-    <div class="card">
-      <div class="card-icon">📶</div>
-      <h3>Internet</h3>
-      <p>
-        Fibre résidentielle offrant des vitesses de
-        100 Mb/s à 1 Gb/s.
-      </p>
-      <div class="price">Dès 54,95 $/mois</div>
+  <section class="contact" id="contact">
+
+    <h2 class="section-title">
+      Nous joindre
+    </h2>
+
+    <p class="subtitle">
+      Une question? Notre équipe est là pour vous aider.
+    </p>
+
+
+    <div class="contact-box">
+
+      <div class="contact-grid">
+
+
+        <div class="contact-item">
+
+          <strong>📍 Adresse</strong>
+
+          2450, boulevard des Horizons<br>
+          Laval (Québec) H7T 2K8
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>☎ Téléphone</strong>
+
+          450 555-0188
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <strong>✉ Courriel</strong>
+
+          info@telecomboreal.ca
+
+        </div>
+
+
+      </div>
+
     </div>
 
+  </section>
 
-    <div class="card">
-      <div class="card-icon">📱</div>
-      <h3>Mobile</h3>
-      <p>
-        Forfaits 5G avec données de 10 Go jusqu'aux
-        données illimitées.
-      </p>
-      <div class="price">Dès 35,00 $/mois</div>
+
+  <!-- =========================
+       PIED DE PAGE
+  ========================== -->
+
+  <footer>
+
+    © 2026 Télécom Boréal —
+    Votre connexion, notre priorité.
+
+    <div class="demo">
+      Télécom Boréal est une entreprise fictive créée uniquement
+      à des fins pédagogiques pour cette formation.
     </div>
 
-
-    <div class="card">
-      <div class="card-icon">📺</div>
-      <h3>Télévision</h3>
-      <p>
-        De 30 à 70 chaînes avec options sports,
-        cinéma et divertissement.
-      </p>
-      <div class="price">Dès 20,00 $/mois</div>
-    </div>
+  </footer>
 
 
-    <div class="card">
-      <div class="card-icon">🏢</div>
-      <h3>Solutions affaires</h3>
-      <p>
-        Internet symétrique et téléphonie IP conçus
-        pour les PME.
-      </p>
-      <div class="price">Dès 24,95 $/mois</div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-icon">⚙️</div>
-      <h3>Services complémentaires</h3>
-      <p>
-        Répéteur Wi-Fi, antivirus et assistance
-        technique 24/7.
-      </p>
-      <div class="price">Dès 5,00 $/mois</div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-icon">⭐</div>
-      <h3>Promotions</h3>
-      <p>
-        Profitez de nos offres Duo, Trio et
-        nouveaux clients.
-      </p>
-      <div class="price">Jusqu'à 20 $/mois de rabais</div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="echo-section" id="echo">
-
-  <h2>
-    Besoin d'aide? Demandez à Écho.
-  </h2>
-
-  <p>
-    Notre assistant virtuel peut vous aider à découvrir nos
-    services, comparer les forfaits et trouver la solution
-    qui correspond le mieux à vos besoins.
-  </p>
+  <!-- =========================
+       BOUTON ÉCHO FLOTTANT
+  ========================== -->
 
   <button
-    class="echo-demo-button"
-    onclick="alert('Écho sera bientôt connecté à Copilot Studio!')">
+    class="echo"
+    onclick="ouvrirEcho()">
 
     💬 Discuter avec Écho
 
   </button>
 
-</section>
 
+  <!-- =========================
+       SCRIPT TEMPORAIRE ÉCHO
+  ========================== -->
 
-<section class="contact" id="contact">
+  <script>
 
-  <h2 class="section-title">
-    Nous joindre
-  </h2>
+    function ouvrirEcho() {
 
-  <p class="subtitle">
-    Une question? Notre équipe est là pour vous aider.
-  </p>
+      alert(
+        "Bonjour! Je suis Écho 👋\n\n" +
+        "Je serai bientôt connecté à Copilot Studio."
+      );
 
+    }
 
-  <div class="contact-box">
-
-    <div class="contact-grid">
-
-      <div class="contact-item">
-        <strong>📍 Adresse</strong>
-        2450, boulevard des Horizons<br>
-        Laval (Québec) H7T 2K8
-      </div>
-
-
-      <div class="contact-item">
-        <strong>☎ Téléphone</strong>
-        450 555-0188
-      </div>
-
-
-      <div class="contact-item">
-        <strong>✉ Courriel</strong>
-        info@telecomboreal.ca
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  © 2026 Télécom Boréal — Votre connexion, notre priorité.
-
-  <div class="demo">
-    Télécom Boréal est une entreprise fictive créée uniquement
-    à des fins pédagogiques pour cette formation.
-  </div>
-
-</footer>
-
-
-<button
-  class="echo"
-  onclick="alert('Écho sera bientôt connecté à Copilot Studio!')">
-
-  💬 Discuter avec Écho
-
-</button>
+  </script>
 
 
 </body>

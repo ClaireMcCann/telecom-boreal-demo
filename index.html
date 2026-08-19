@@ -27,7 +27,7 @@
     /* ---------------- HEADER ---------------- */
 
     header {
-      height: 95px;
+      height: 105px;
       padding: 12px 7%;
       display: flex;
       justify-content: space-between;
@@ -39,12 +39,20 @@
       z-index: 100;
     }
 
-    .logo img {
-      height: 68px;
-      max-width: 310px;
-      object-fit: contain;
-    }
+    .logo {
+  height: 85px;
+  width: 360px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 
+.logo img {
+  width: 360px;
+  height: 135px;
+  object-fit: cover;
+  object-position: center;
+}
     nav a {
       margin-left: 28px;
       text-decoration: none;

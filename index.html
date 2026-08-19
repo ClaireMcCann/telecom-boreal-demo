@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Télécom Boréal | Solutions pour entreprises</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+      color: #1267a5;
+    }
+
+    .logo span {
+      color: #34a6a1;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #344054;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 520px;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #eef8fc, #f5fffd);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 14px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      background: #dff4f2;
+      color: #147a76;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #526174;
+      max-width: 620px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1267a5;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #667085;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      text-align: left;
+      padding: 30px;
+      border: 1px solid #e4e7ec;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    }
+
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #667085;
+    }
+
+    .echo {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: #1267a5;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 16px 22px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,.20);
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 30px 8%;
+      background: #172033;
+      color: white;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Télécom <span>Boréal</span></div>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#services">Solutions</a>
+    <a href="#">À propos</a>
+    <a href="#">Nous joindre</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="tag">Solutions pour entreprises</div>
+
+    <h1>Votre connexion,<br>notre priorité.</h1>
+
+    <p>
+      Des solutions Internet, téléphoniques et numériques pensées
+      pour accompagner les entreprises d'ici.
+    </p>
+
+    <a class="button" href="#services">Découvrir nos solutions</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Des solutions adaptées à votre entreprise</h2>
+
+  <p class="subtitle">
+    Simple. Fiable. À votre mesure.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>Internet affaires</h3>
+      <p>
+        Une connexion rapide et fiable pour garder votre entreprise
+        productive en tout temps.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">☎️</div>
+      <h3>Téléphonie</h3>
+      <p>
+        Des solutions de communication flexibles adaptées à votre
+        équipe et à votre croissance.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">☁️</div>
+      <h3>Solutions numériques</h3>
+      <p>
+        Des outils modernes pour simplifier vos opérations et
+        connecter vos équipes.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Télécom Boréal — Site de démonstration
+</footer>
+
+<button class="echo" onclick="alert('Écho sera bientôt connecté à Copilot Studio!')">
+  💬 Discuter avec Écho
+</button>
+
+</body>
+</html>

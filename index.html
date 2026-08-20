@@ -43,11 +43,12 @@
       align-items: center;
     }
 
-   .logo img {
-  height: 65px;
-  width: auto;
-  display: block;
-}
+    .logo img {
+      height: 65px;
+      width: auto;
+      display: block;
+    }
+
     nav a {
       margin-left: 28px;
       text-decoration: none;
@@ -60,11 +61,15 @@
       color: #00b4c8;
     }
 
+    /* HERO */
+
     .hero {
       min-height: 560px;
-      padding: 80px 8%;
+      padding: 70px 7%;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 60px;
 
       background:
         radial-gradient(
@@ -80,7 +85,27 @@
     }
 
     .hero-content {
-      max-width: 720px;
+      flex: 1;
+      max-width: 650px;
+    }
+
+    /* IMAGE À DROITE */
+
+    .hero-image {
+      flex: 1;
+      max-width: 650px;
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
     }
 
     .tag {
@@ -124,6 +149,8 @@
       transform: translateY(-2px);
     }
 
+    /* VALEURS */
+
     .values {
       padding: 55px 8%;
       background: #ffffff;
@@ -162,6 +189,8 @@
     .value p {
       color: #617386;
     }
+
+    /* SERVICES */
 
     .services {
       padding: 75px 8%;
@@ -224,6 +253,8 @@
       color: #00a9bb;
     }
 
+    /* ÉCHO */
+
     .echo-section {
       padding: 75px 8%;
       background: linear-gradient(
@@ -264,6 +295,8 @@
       transform: translateY(-2px);
     }
 
+    /* CONTACT */
+
     .contact {
       padding: 70px 8%;
       text-align: center;
@@ -294,6 +327,8 @@
       margin-bottom: 7px;
     }
 
+    /* FOOTER */
+
     footer {
       padding: 32px 8%;
       background: #022f4e;
@@ -307,6 +342,8 @@
       font-size: 12px;
       opacity: 0.8;
     }
+
+    /* BOUTON ÉCHO FLOTTANT */
 
     .echo {
       position: fixed;
@@ -329,6 +366,8 @@
       background: #00a9bb;
       transform: translateY(-2px);
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 850px) {
 
@@ -353,6 +392,16 @@
       .hero {
         min-height: auto;
         padding: 65px 7%;
+        flex-direction: column;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero-image {
+        max-width: 100%;
+        width: 100%;
       }
 
       .cards,
@@ -369,7 +418,6 @@
 
   </style>
 </head>
-
 
 <body>
 
@@ -389,6 +437,9 @@
     </nav>
 
   </header>
+
+
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -415,7 +466,19 @@
 
     </div>
 
+
+    <!-- IMAGE HERO -->
+
+    <div class="hero-image">
+      <img
+        src="image.png"
+        alt="Réseau de télécommunications Télécom Boréal">
+    </div>
+
   </section>
+
+
+  <!-- VALEURS -->
 
   <section class="values">
 
@@ -442,6 +505,9 @@
     </div>
 
   </section>
+
+
+  <!-- SERVICES -->
 
   <section class="services" id="services">
 
@@ -496,6 +562,9 @@
 
   </section>
 
+
+  <!-- ÉCHO -->
+
   <section class="echo-section" id="echo">
 
     <h2>Besoin d'aide? Demandez à Écho.</h2>
@@ -511,6 +580,9 @@
     </button>
 
   </section>
+
+
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -543,6 +615,9 @@
 
   </section>
 
+
+  <!-- FOOTER -->
+
   <footer>
 
     © 2026 Télécom Boréal —
@@ -555,9 +630,13 @@
 
   </footer>
 
+
+  <!-- BOUTON ÉCHO -->
+
   <button class="echo" onclick="ouvrirEcho()">
     💬 Discuter avec Écho
   </button>
+
 
   <script>
 

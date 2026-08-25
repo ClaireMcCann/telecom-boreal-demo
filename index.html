@@ -367,20 +367,20 @@
 
     /* FENÊTRE ÉCHO */
 
-    .echo-chat {
-      display: none;
-      position: fixed;
-      right: 25px;
-      bottom: 95px;
-      width: 400px;
-      height: 600px;
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
-      z-index: 1000;
-      border: 1px solid #dce5eb;
-    }
+.echo-chat {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 95px;
+  width: min(470px, calc(100vw - 30px));
+  height: 600px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
+  z-index: 1000;
+  border: 1px solid #dce5eb;
+}
 
     .echo-chat.active {
       display: flex;

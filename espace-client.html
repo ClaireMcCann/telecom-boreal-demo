@@ -1,1 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Espace client | Télécom Boréal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f9;
+      color: #243746;
+    }
+
+    /* EN-TÊTE */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #dce5eb;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #024873;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #024873;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .back-link {
+      color: #024873;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* PAGE */
+
+    main {
+      min-height: calc(100vh - 145px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px;
+    }
+
+    .client-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    }
+
+    /* PARTIE GAUCHE */
+
+    .client-info {
+      background: #024873;
+      color: white;
+      padding: 55px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .client-info h1 {
+      font-size: 38px;
+      margin: 0 0 18px;
+    }
+
+    .client-info p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .client-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .client-info li {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    /* CONNEXION */
+
+    .login {
+      padding: 50px 42px;
+    }
+
+    .login h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #024873;
+      font-size: 27px;
+    }
+
+    .login-intro {
+      color: #657785;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 18px 0 7px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cbd6dd;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    input:focus {
+      outline: 2px solid #69B3E7;
+      border-color: #69B3E7;
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #005587;
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    .login-button {
+      width: 100%;
+      margin-top: 28px;
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #005587;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background: #024873;
+    }
+
+    .demo-note {
+      margin-top: 25px;
+      padding: 13px;
+      background: #f4f7f9;
+      border-radius: 7px;
+      color: #657785;
+      font-size: 13px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    /* PIED DE PAGE */
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #71808b;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .client-wrapper {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .client-info {
+        padding: 35px 30px;
+      }
+
+      .client-info h1 {
+        font-size: 30px;
+      }
+
+      .login {
+        padding: 35px 30px;
+      }
+
+      header {
+        padding: 16px 20px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <a href="index.html" class="brand">
+      <div class="brand-icon">B</div>
+      <div class="brand-name">Télécom Boréal</div>
+    </a>
+
+    <a href="index.html" class="back-link">
+      ← Retour au site
+    </a>
+
+  </header>
+
+  <main>
+
+    <div class="client-wrapper">
+
+      <!-- INFORMATION -->
+
+      <section class="client-info">
+
+        <h1>Votre espace client</h1>
+
+        <p>
+          Gérez vos services Télécom Boréal simplement,
+          où que vous soyez.
+        </p>
+
+        <ul>
+          <li>✓ Consultez vos factures</li>
+          <li>✓ Suivez votre consommation</li>
+          <li>✓ Consultez vos services et forfaits</li>
+          <li>✓ Gérez vos informations de compte</li>
+        </ul>
+
+      </section>
+
+      <!-- CONNEXION -->
+
+      <section class="login">
+
+        <h2>Connexion</h2>
+
+        <p class="login-intro">
+          Entrez vos informations pour accéder à votre compte.
+        </p>
+
+        <form onsubmit="return false;">
+
+          <label for="email">Adresse courriel</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="exemple@courriel.ca"
+          >
+
+          <label for="password">Mot de passe</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Votre mot de passe"
+          >
+
+          <a href="#" class="forgot">
+            Mot de passe oublié?
+          </a>
+
+          <button type="submit" class="login-button">
+            Se connecter
+          </button>
+
+        </form>
+
+        <div class="demo-note">
+          Environnement de démonstration — aucune donnée réelle
+          n'est recueillie ou enregistrée.
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Télécom Boréal — Votre connexion, notre priorité.<br>
+    Site fictif créé à des fins pédagogiques.
+  </footer>
+
+</body>
+</html>

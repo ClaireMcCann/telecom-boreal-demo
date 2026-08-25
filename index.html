@@ -89,8 +89,6 @@
       max-width: 650px;
     }
 
-    /* IMAGE À DROITE */
-
     .hero-image {
       flex: 1;
       max-width: 650px;
@@ -367,6 +365,59 @@
       transform: translateY(-2px);
     }
 
+    /* FENÊTRE ÉCHO */
+
+    .echo-chat {
+      display: none;
+      position: fixed;
+      right: 25px;
+      bottom: 95px;
+      width: 400px;
+      height: 600px;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
+      z-index: 1000;
+      border: 1px solid #dce5eb;
+    }
+
+    .echo-chat.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .echo-chat-header {
+      height: 58px;
+      padding: 0 18px;
+      background: #024873;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .echo-chat-header strong {
+      font-size: 17px;
+    }
+
+    .echo-close {
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .echo-chat iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      flex: 1;
+    }
+
     /* RESPONSIVE */
 
     @media (max-width: 850px) {
@@ -413,6 +464,13 @@
       .echo {
         right: 15px;
         bottom: 15px;
+      }
+
+      .echo-chat {
+        right: 15px;
+        bottom: 85px;
+        width: calc(100% - 30px);
+        height: 70vh;
       }
     }
 
@@ -465,9 +523,6 @@
       </a>
 
     </div>
-
-
-    <!-- IMAGE HERO -->
 
     <div class="hero-image">
       <img
@@ -631,22 +686,48 @@
   </footer>
 
 
-  <!-- BOUTON ÉCHO -->
+  <!-- BOUTON ÉCHO FLOTTANT -->
 
   <button class="echo" onclick="ouvrirEcho()">
     💬 Discuter avec Écho
   </button>
 
 
+  <!-- FENÊTRE DE CLAVARDAGE ÉCHO -->
+
+  <div class="echo-chat" id="echoChat">
+
+    <div class="echo-chat-header">
+      <strong>💬 Écho — Télécom Boréal</strong>
+
+      <button
+        class="echo-close"
+        onclick="fermerEcho()"
+        aria-label="Fermer">
+        ×
+      </button>
+    </div>
+
+    <iframe
+      src="https://copilotstudio.microsoft.com/environments/0dfc6748-ef5d-e214-809d-bb8acde11df2/bots/cr301_Formation/webchat?__version__=2"
+      title="Écho - Assistant virtuel Télécom Boréal">
+    </iframe>
+
+  </div>
+
+
   <script>
 
     function ouvrirEcho() {
+      document
+        .getElementById("echoChat")
+        .classList.add("active");
+    }
 
-      alert(
-        "Bonjour! Je suis Écho 👋\n\n" +
-        "Je serai bientôt connecté à Copilot Studio."
-      );
-
+    function fermerEcho() {
+      document
+        .getElementById("echoChat")
+        .classList.remove("active");
     }
 
   </script>
